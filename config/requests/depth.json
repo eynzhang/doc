@@ -1,0 +1,73 @@
+{
+    "tableConfig": {
+      "request": {
+        "columns": [
+          { "prop": "parameter", "label": "参数", "width": "80" },
+          { "prop": "datatype", "label": "数据类型", "width": "80" },
+          { "prop": "value", "label": "值", "width": "100" },
+          { "prop": "desc", "label": "描述", "width": "80" },
+          { "prop": "range", "label": "取值范围", "width": "80" }
+        ]
+      },
+      "response": {
+        "columns": [
+          { "prop": "parameter", "label": "字段名称", "width": "80" },
+          { "prop": "datatype", "label": "数据类型", "width": "80" },
+          { "prop": "desc", "label": "描述", "width": "80" }
+        ]
+      }
+    },
+    "tableData": {
+      "name": "depth",
+      "path": "/market/history/depth",
+      "httpRequestMethod": "get",
+      "requestModel": {
+        "symbol": "btcusdt",
+        "depth": "20",
+        "type": "step0"
+      },
+      "request": [
+        {
+          "parameter": "symbol",
+          "datatype": "string",
+          "value": "btcusdt",
+          "desc": "The trading symbol to query"
+        },
+        {
+          "parameter": "depth",
+          "datatype": "integer",
+          "value": "20",
+          "desc": "The number of market depth to return on each side"
+        },
+        {
+          "parameter": "type",
+          "datatype": "string",
+          "value": "step0",
+          "desc": "Market depth aggregation level, details below"
+        }
+      ],
+      "response": [
+        {
+          "parameter": "ts",
+          "datatype": "integer",
+          "desc": "The UNIX timestamp in milliseconds adjusted to Singapore time"
+        },
+        {
+          "parameter": "version",
+          "datatype": "integer",
+          "desc": "Internal data"
+        },
+        {
+          "parameter": "bids",
+          "datatype": "object",
+          "desc": "The current all bids in format [price, size]"
+        },
+        {
+          "parameter": "asks",
+          "datatype": "object",
+          "desc": "The current all asks in format [price, size]"
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,43 @@
+{
+  "menu_items": [
+    {
+      "id": 1,
+      "index": "1",
+      "name": "Common Data",
+      "endpoints": [
+        {
+          "id": 11,
+          "index": "/?name=market_status",
+          "name": "Get Market Status"
+        },
+        {
+          "id": 12,
+          "index": "/?name=symbols",
+          "name": "Get Symbols"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "index": "2",
+      "name": "Market Data",
+      "endpoints": [
+        {
+          "id": 21,
+          "index": "/?name=kline",
+          "name": "Get Klines(Candles)"
+        },
+        {
+          "id": 22,
+          "index": "/?name=depth",
+          "name": "Get Market Depth"
+        },
+        {
+          "id": 23,
+          "index": "/?name=trade",
+          "name": "Get the Last Trade"
+        }
+      ]
+    }
+  ]
+}

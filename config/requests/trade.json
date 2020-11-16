@@ -1,0 +1,70 @@
+{
+    "tableConfig": {
+      "request": {
+        "columns": [
+          { "prop": "parameter", "label": "参数", "width": "80" },
+          { "prop": "datatype", "label": "数据类型", "width": "80" },
+          { "prop": "value", "label": "值", "width": "100" },
+          { "prop": "desc", "label": "描述", "width": "80" },
+          { "prop": "range", "label": "取值范围", "width": "80" }
+        ]
+      },
+      "response": {
+        "columns": [
+          { "prop": "parameter", "label": "字段名称", "width": "80" },
+          { "prop": "datatype", "label": "数据类型", "width": "80" },
+          { "prop": "desc", "label": "描述", "width": "80" }
+        ]
+      }
+    },
+    "tableData": {
+      "name": "trade",
+      "path": "/market/trade",
+      "httpRequestMethod": "get",
+      "requestModel": {
+        "symbol": "btcusdt"
+      },
+      "request": [
+        {
+          "parameter": "symbol",
+          "datatype": "string",
+          "value": "btcusdt",
+          "desc": "The trading symbol to query"
+        }
+
+      ],
+      "response": [
+        {
+          "parameter": "id",
+          "datatype": "integer",
+          "desc": "The unique trade id of this trade (to be obsoleted)"
+        },
+        {
+          "parameter": "trade-id",
+          "datatype": "integer",
+          "desc": "The unique trade id (NEW)"
+        },
+        {
+          "parameter": "amount",
+          "datatype": "float",
+          "desc": "The trading volume in base currency"
+        },
+        {
+          "parameter": "price",
+          "datatype": "float",
+          "desc": "The trading price in quote currency"
+        },
+        {
+          "parameter": "ts",
+          "datatype": "integer",
+          "desc": "The UNIX timestamp in milliseconds adjusted to Singapore time"
+        },
+        {
+          "parameter": "direction",
+          "datatype": "integer",
+          "desc": "The direction of the taker trade: 'buy' or 'sell'"
+        }
+      ]
+    }
+  }
+  

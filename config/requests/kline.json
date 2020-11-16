@@ -1,0 +1,97 @@
+{
+  "tableConfig": {
+    "request": {
+      "columns": [
+        { "prop": "parameter", "label": "参数", "width": "80" },
+        { "prop": "datatype", "label": "数据类型", "width": "80" },
+        { "prop": "value", "label": "值", "width": "100" },
+        { "prop": "desc", "label": "描述", "width": "80" },
+        { "prop": "range", "label": "取值范围", "width": "80" }
+      ]
+    },
+    "response": {
+      "columns": [
+        { "prop": "parameter", "label": "字段名称", "width": "80" },
+        { "prop": "datatype", "label": "数据类型", "width": "80" },
+        { "prop": "desc", "label": "描述", "width": "80" }
+      ]
+    }
+  },
+  "tableData": {
+    "name": "kline",
+    "path": "/market/history/kline",
+    "httpRequestMethod": "get",
+    "rest": false,
+    "requestModel": {
+      "symbol": "btcusdt",
+      "period": "5min",
+      "size": 5
+    },
+    "request": [
+      {
+        "parameter": "symbol",
+        "datatype": "string",
+        "value": "btcusdt",
+        "desc": "The trading symbol to query",
+        "range": ""
+      },
+      {
+        "parameter": "period",
+        "datatype": "string",
+        "value": "1min",
+        "desc": "The period of each candle",
+        "range": ""
+
+      },
+      {
+        "parameter": "size",
+        "datatype": "int",
+        "value": "2",
+        "desc": "The number of data returns",
+        "range": ""
+      }
+    ],
+    "response": [
+      {
+        "parameter": "id",
+        "datatype": "long",
+        "desc": "The UNIX timestamp in seconds as response id"
+      },
+      {
+        "parameter": "amount",
+        "datatype": "float",
+        "desc": "Accumulated trading volume, in base currency"
+      },
+      {
+        "parameter": "count",
+        "datatype": "integer",
+        "desc": "The number of completed trades"
+      },
+      {
+        "parameter": "open",
+        "datatype": "float",
+        "desc": "The opening price"
+      },
+      {
+        "parameter": "close",
+        "datatype": "float",
+        "desc": "The closing price"
+      },
+      {
+        "parameter": "low",
+        "datatype": "float",
+        "desc": "The low price"
+      },
+      {
+        "parameter": "high",
+        "datatype": "float",
+        "desc": "The high price"
+      },
+      {
+        "parameter": "vol",
+        "datatype": "float",
+        "desc": "Accumulated trading value, in quote currency"
+      }
+    ]
+  }
+}

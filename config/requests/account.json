@@ -1,0 +1,59 @@
+{
+    "tableConfig": {
+      "request": {
+        "columns": [
+          { "prop": "parameter", "label": "Parameter", "width": "80" },
+          { "prop": "datatype", "label": "Data Type", "width": "80" },
+          { "prop": "value", "label": "Value", "width": "100" },
+          { "prop": "desc", "label": "Description", "width": "200" },
+          { "prop": "range", "label": "Value Range", "width": "300" }
+        ]
+      },
+      "response": {
+        "columns": [
+          { "prop": "parameter", "label": "Field", "width": "80" },
+          { "prop": "datatype", "label": "Data Type", "width": "80" },
+          { "prop": "desc", "label": "Description", "width": "160" },
+          { "prop": "desc", "label": "Value Range", "width": "600" }
+        ]
+      }
+    },
+    "tableData": {
+      "name": "trade",
+      "path": "/v1/account/accounts",
+      "httpRequestMethod": "get",
+      "signatureRequired": true,
+      "requestModel": {
+      },
+      "request": [
+
+      ],
+      "response": [
+        {
+          "parameter": "id",
+          "datatype": "integer",
+          "desc": "Unique account id",
+          "range": "NA"
+        },
+        {
+          "parameter": "state",
+          "datatype": "string",
+          "desc": "Account state",
+          "range": "working, lock"
+        },
+        {
+          "parameter": "type",
+          "datatype": "string",
+          "desc": "The type of this account",
+          "range": "spot, margin, otc, point, super-margin, investment, borrow"
+        },
+        {
+          "parameter": "subtype",
+          "datatype": "string",
+          "desc": "The type of sub account (applicable only for isolated margin accout)",
+          "range": "The corresponding trading symbol (currency pair) the isolated margin is based on, e.g. btcusdt"
+        }
+      ]
+    }
+  }
+  

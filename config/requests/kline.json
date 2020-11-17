@@ -2,18 +2,18 @@
   "tableConfig": {
     "request": {
       "columns": [
-        { "prop": "parameter", "label": "参数", "width": "80" },
-        { "prop": "datatype", "label": "数据类型", "width": "80" },
-        { "prop": "value", "label": "值", "width": "100" },
-        { "prop": "desc", "label": "描述", "width": "80" },
-        { "prop": "range", "label": "取值范围", "width": "80" }
+        { "prop": "parameter", "label": "Parameter", "width": "80" },
+        { "prop": "datatype", "label": "Data Type", "width": "80" },
+        { "prop": "value", "label": "Value", "width": "100" },
+        { "prop": "desc", "label": "Description", "width": "200" },
+        { "prop": "range", "label": "Value Range", "width": "300" }
       ]
     },
     "response": {
       "columns": [
-        { "prop": "parameter", "label": "字段名称", "width": "80" },
-        { "prop": "datatype", "label": "数据类型", "width": "80" },
-        { "prop": "desc", "label": "描述", "width": "80" }
+        { "prop": "parameter", "label": "Field", "width": "80" },
+        { "prop": "datatype", "label": "Data Type", "width": "80" },
+        { "prop": "desc", "label": "Description", "width": "600" }
       ]
     }
   },
@@ -33,22 +33,22 @@
         "datatype": "string",
         "value": "btcusdt",
         "desc": "The trading symbol to query",
-        "range": ""
+        "range": "All trading symbol supported, e.g. btcusdt, bccbtcn (to retrieve candlesticks for ETP NAV, symbol = ETP trading symbol + suffix 'nav'，for example: btc3lusdtnav)"
       },
       {
         "parameter": "period",
         "datatype": "string",
         "value": "1min",
         "desc": "The period of each candle",
-        "range": ""
+        "range": "1min, 5min, 15min, 30min, 60min, 4hour, 1day, 1mon, 1week, 1year"
 
       },
       {
         "parameter": "size",
         "datatype": "int",
-        "value": "2",
+        "value": "5",
         "desc": "The number of data returns",
-        "range": ""
+        "range": "[1, 2000]"
       }
     ],
     "response": [

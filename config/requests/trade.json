@@ -2,18 +2,18 @@
     "tableConfig": {
       "request": {
         "columns": [
-          { "prop": "parameter", "label": "参数", "width": "80" },
-          { "prop": "datatype", "label": "数据类型", "width": "80" },
-          { "prop": "value", "label": "值", "width": "100" },
-          { "prop": "desc", "label": "描述", "width": "80" },
-          { "prop": "range", "label": "取值范围", "width": "80" }
+          { "prop": "parameter", "label": "Parameter", "width": "80" },
+          { "prop": "datatype", "label": "Data Type", "width": "80" },
+          { "prop": "value", "label": "Value", "width": "100" },
+          { "prop": "desc", "label": "Description", "width": "200" },
+          { "prop": "range", "label": "Value Range", "width": "300" }
         ]
       },
       "response": {
         "columns": [
-          { "prop": "parameter", "label": "字段名称", "width": "80" },
-          { "prop": "datatype", "label": "数据类型", "width": "80" },
-          { "prop": "desc", "label": "描述", "width": "80" }
+          { "prop": "parameter", "label": "Field", "width": "80" },
+          { "prop": "datatype", "label": "Data Type", "width": "80" },
+          { "prop": "desc", "label": "Description", "width": "600" }
         ]
       }
     },
@@ -29,7 +29,9 @@
           "parameter": "symbol",
           "datatype": "string",
           "value": "btcusdt",
-          "desc": "The trading symbol to query"
+          "desc": "The trading symbol to query",
+          "range": "Refer to GET /v1/common/symbols"
+
         }
 
       ],

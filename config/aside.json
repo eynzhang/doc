@@ -38,6 +38,28 @@
           "name": "Get the Last Trade"
         }
       ]
+    },
+    {
+      "id": 3,
+      "index": "3",
+      "name": "Accounts",
+      "endpoints": [
+        {
+          "id": 31,
+          "index": "/?name=account",
+          "name": "Get all Accounts of the Current User"
+        },
+        {
+          "id": 32,
+          "index": "/?name=depth",
+          "name": "Asset Transfer"
+        },
+        {
+          "id": 33,
+          "index": "/?name=trade",
+          "name": "Transfer Fund Between Spot Account and Future Contract Account"
+        }
+      ]
     }
   ]
 }
